@@ -1,4 +1,11 @@
+$FunctionsPath = Join-Path -Path $PSScriptRoot -ChildPath ".."
+$Functions = Get-ChildItem -Path $FunctionsPath -Filter "*.ps1"
 
-Get-ChildItem -Path $PSScriptRoot\Functions | 
-    ForEach-Object -Process {. $PSItem.FullName}
+foreach ($Function in $Functions) {
+    . $Function.FullName
+}
 
+# Export functions
+Export-ModuleMember -Function *
+
+Write-Host "Functions Loaded"
