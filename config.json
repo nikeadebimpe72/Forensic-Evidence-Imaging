@@ -1,0 +1,17 @@
+[
+  {
+    "Info": "Processor",
+    "Class": "Win32_Processor",
+    "Property": "Name"
+  },
+  {
+    "Info": "Memory",
+    "Class": "Win32_ComputerSystem",
+    "Property": "TotalPhysicalMemory"
+  },
+  {
+    "Info": "Disk",
+    "Class": "Win32_LogicalDisk",
+    "Property": "Size"
+  }
+]
